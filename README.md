@@ -254,7 +254,7 @@ Automated tests run on Linux with k6 1.6. The dashboard and k6 detection have al
 Issues and pull requests are welcome.
 
 ```bash
-git clone https://github.com/your-username/requestpulse.git
+git clone https://github.com/parth-0702/requestpulse.git
 cd requestpulse
 npm install
 # Press F5 in VS Code to launch an Extension Development Host
