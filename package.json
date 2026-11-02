@@ -1,0 +1,90 @@
+{
+  "name": "requestpulse",
+  "displayName": "RequestPulse — Load Testing",
+  "description": "Load-test any local or deployed HTTP endpoint (localhost, Vercel, Render) from VS Code. See response-time, error and throughput charts, and compare before/after runs.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-id",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/requestpulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/requestpulse/issues"
+  },
+  "homepage": "https://github.com/your-username/requestpulse#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Testing",
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "load testing",
+    "performance",
+    "benchmark",
+    "k6",
+    "api",
+    "latency",
+    "stress test"
+  ],
+  "icon": "media/icon.png",
+  "main": "./out/src/extension.js",
+  "activationEvents": [],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "requestpulse.openDashboard",
+        "title": "Open Dashboard",
+        "category": "RequestPulse"
+      },
+      {
+        "command": "requestpulse.stopTest",
+        "title": "Stop Running Test",
+        "category": "RequestPulse"
+      },
+      {
+        "command": "requestpulse.checkK6",
+        "title": "Check k6 Installation",
+        "category": "RequestPulse"
+      },
+      {
+        "command": "requestpulse.openReportsFolder",
+        "title": "Open Saved Reports Folder",
+        "category": "RequestPulse"
+      }
+    ],
+    "configuration": {
+      "title": "RequestPulse",
+      "properties": {
+        "requestpulse.k6Path": {
+          "type": "string",
+          "default": "k6",
+          "scope": "machine",
+          "markdownDescription": "Path to the `k6` executable. Leave as `k6` if it is on your PATH. Only used by RequestPulse to run load tests."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test out/test/validate.test.js out/test/results.test.js out/test/k6.test.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "@types/vscode": "~1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.6.0"
+  }
+}
