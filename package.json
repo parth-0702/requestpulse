@@ -3,7 +3,7 @@
   "displayName": "RequestPulse — Load Testing",
   "description": "Load-test any local or deployed HTTP endpoint (localhost, Vercel, Render) from VS Code. See response-time, error and throughput charts, and compare before/after runs.",
   "version": "1.0.0",
-  "publisher": "your-publisher-id",
+  "publisher": "parthoza",
   "license": "MIT",
   "private": false,
   "repository": {
